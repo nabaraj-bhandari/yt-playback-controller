@@ -2,6 +2,11 @@ import { formatTime, formatRemainingTime } from "../utils/format";
 
 export default function ProgressBar({ current, duration, onChange, onCommit }) {
   const progressPercentage = duration > 0 ? (current / duration) * 100 : 0;
+
+  const sliderStyle = {
+    background: `linear-gradient(to right, #f59e0b 0%, #f59e0b ${progressPercentage}%, #374151 ${progressPercentage}%, #374151 100%)`,
+  };
+
   return (
     <>
       <input
@@ -12,7 +17,8 @@ export default function ProgressBar({ current, duration, onChange, onCommit }) {
         onChange={onChange}
         onMouseUp={onCommit}
         onTouchEnd={onCommit}
-        className="w-full h-1 bg-gray-700 rounded-full appearance-none accent-amber-500"
+        style={sliderStyle}
+        className="w-full h-1 rounded-full appearance-none cursor-pointer"
       />
       <div className="flex justify-between text-sm text-gray-400 mt-1">
         <span>{formatTime(current)}</span>

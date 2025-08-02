@@ -19,7 +19,7 @@ export default function Controls({
     <div className="flex items-center justify-between">
       <button
         onClick={onPrevious}
-        className="w-14 h-14 rounded-full bg-green-700 flex items-center justify-center active:bg-green-600"
+        className="w-12 h-12 rounded-full bg-green-700 flex items-center justify-center active:bg-green-600"
       >
         <SkipBack className="w-6 h-6 text-white" />
       </button>
@@ -27,7 +27,7 @@ export default function Controls({
         onClick={onRewind}
         className="w-14 h-14 rounded-full bg-green-700 flex items-center justify-center active:bg-green-600"
       >
-        <RotateCcw className="w-5 h-5 text-white" />
+        <RotateCcw className="w-6 h-6 text-white" />
       </button>
       <button
         onClick={onPlayPause}
@@ -43,11 +43,11 @@ export default function Controls({
         onClick={onForward}
         className="w-14 h-14 rounded-full bg-green-700 flex items-center justify-center active:bg-green-600"
       >
-        <RotateCw className="w-5 h-5 text-white" />
+        <RotateCw className="w-6 h-6 text-white" />
       </button>
       <button
         onClick={onNext}
-        className="w-14 h-14 rounded-full bg-green-700 flex items-center justify-center active:bg-green-600"
+        className="w-12 h-12 rounded-full bg-green-700 flex items-center justify-center active:bg-green-600"
       >
         <SkipForward className="w-6 h-6 text-white" />
       </button>

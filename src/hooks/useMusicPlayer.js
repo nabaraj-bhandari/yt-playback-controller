@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from "react";
 
 export function useMusicPlayer() {
   const [playerState, setPlayerState] = useState({
-    title: "YouTube",
+    title: "",
     duration: 0,
     current: 0,
     paused: true,
@@ -49,7 +49,7 @@ export function useMusicPlayer() {
               duration: data.duration || 0,
               id: data.id || "",
             }));
-            setThumbUrl(`https://i.ytimg.com/vi/${data.id}/maxresdefault.jpg`);
+            setThumbUrl(`https://img.youtube.com/vi/${data.id}/0.jpg`);
           }
           if (data.type === "state") {
             setPlayerState((prev) => ({
